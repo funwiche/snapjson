@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const auth = require("../middlewares/auth");
 const Product = require("../models/product");
-const categories = require("../resources/categories.json");
 const parsed = require("../utils/parsed");
 
 router.get("", async (req, res) => {
@@ -45,7 +44,13 @@ router.get("/autocomplete", async (req, res) => {
   }
 });
 
-router.get("/categories", (req, res) => res.status(200).json(categories));
+router.get("/categories", async (req, res) => {
+  try {
+    res.status(200).json(await Product.find().distinct("category"));
+  } catch (err) {
+    console.error(err);
+  }
+});
 
 router.get("/:id", async (req, res) => {
   try {
