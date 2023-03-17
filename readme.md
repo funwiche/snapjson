@@ -2,6 +2,8 @@
 
 This project provides various types of Restful API endpoints with JSON data to be used in developing the frontend without worrying about the backend.
 
+https://snapjson.onrender.com
+
 ## Setup
 
 Make sure to install the dependencies:
