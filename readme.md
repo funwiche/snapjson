@@ -59,7 +59,7 @@ fetch("https://snapjson.com/products")
 
 Result
 
-```javascript
+```json
 {
   "items": [
     {
