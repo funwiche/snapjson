@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="/scripts/zero-md.js"></script>
+   <title><%= name %> - SnapJSON</title>
+  </head>
+  <body>
+    <main class="p-3 md:p-8">
+      <div class="mx-auto max-w-[960px] md:border border-neutral-800">
+        <div class="p-6">
+          <%if(name=='auth'){%>
+          <zero-md src="/auth.md" />
+          <%}else if(name=='users'){%>
+          <zero-md src="/users.md" />
+          <%}else if(name=='products'){%>
+          <zero-md src="/products.md" />
+          <%}else if(name=='orders'){%>
+          <zero-md src="/orders.md" />
+          <%}else if(name=='posts'){%>
+          <zero-md src="/posts.md" />
+          <%}else if(name=='comments'){%>
+          <zero-md src="/comments.md" />
+          <%}else if(name=='quotes'){%>
+          <zero-md src="/quotes.md" />
+          <%}else if(name=='todos'){%>
+          <zero-md src="/todos.md" />
+          <%}else if(name=='cities'){%>
+          <zero-md src="/cities.md" />
+          <%}else if(name=='countries'){%>
+          <zero-md src="/countries.md" />
+          <%}else{%><zero-md src="/home.md" /><%}%>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
