@@ -51,6 +51,13 @@ router.get("/categories", async (req, res) => {
     console.error(err);
   }
 });
+router.get("/brands", async (req, res) => {
+  try {
+    res.status(200).json(await Product.find().distinct("brand"));
+  } catch (err) {
+    console.error(err);
+  }
+});
 
 router.get("/:id", async (req, res) => {
   try {
