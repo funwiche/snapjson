@@ -12,6 +12,6 @@ module.exports = mongoose.model(
       state_name: String,
       country: String,
     },
-    { versionKey: false }
+    { versionKey: false, timestamps: false }
   )
 );
